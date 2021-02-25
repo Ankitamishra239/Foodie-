@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "228069047127",
+    "firebase_url": "https://foodie-6daf0-default-rtdb.firebaseio.com",
+    "project_id": "foodie-6daf0",
+    "storage_bucket": "foodie-6daf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228069047127:android:56285746174f32c42d1c12",
+        "android_client_info": {
+          "package_name": "ashiana.com.foodie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228069047127-f6n7n39vlj55pkcknfkitlngnl44vsah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ashiana.com.foodie",
+            "certificate_hash": "fc85e2fe36a46f46f568c0042fb9864a7847f49a"
+          }
+        },
+        {
+          "client_id": "228069047127-941s2ur1j6vj8tctqvsqbmt2m3lvgj69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqa5c1HY3uOVQGKKG_iKLPWt-ijxOPN4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228069047127-941s2ur1j6vj8tctqvsqbmt2m3lvgj69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Foodie!</string>
+<string name="Bharatz"><a href="https://www.youtube.com/watch?v=tlDhbsO-kGc">Bharatz Kitchen</a></string>
+    <string-array name="foodItem">
+        <item>Dhokla</item>
+        <item>Dhokla</item>
+        <item>Dhokla</item>
+        <item>Dhokla</item>
+        <item>Dhokla</item>
+    </string-array>
+</resources>
