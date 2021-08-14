@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IngredientSearchResult">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10sp"
+        android:padding="5sp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="380sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:background="#FBAEC2"
+            android:text="Ingredients"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+
+        <ListView
+            android:id="@+id/ingredientListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#f00"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="380sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:background="#FBAEC2"
+            android:text="Your Results"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/foodrv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+</LinearLayout>

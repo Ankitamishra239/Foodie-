@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ashiana.com.foodie">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +14,12 @@
         android:roundIcon="@mipmap/emoji"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchByNameActivity"></activity>
+        <activity android:name=".ComplaintActivity"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".UrlViewActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".IngredientSearchResult" />
+        <activity android:name=".SearchByNameActivity" />
         <activity android:name=".Details" />
         <activity android:name=".IngredientSearchActivity" />
         <activity
@@ -26,6 +34,10 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>

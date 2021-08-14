@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="590sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:text=" "
+            android:background="@color/colorPrimary"
+            />
+
+<com.google.android.youtube.player.YouTubePlayerView
+    android:layout_width="match_parent"
+    android:layout_height="380sp"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:id="@+id/youtubePlayerView"
+    />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:background="#FBAEC2"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        android:layout_gravity="center"
+        android:text="Play" />
+
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

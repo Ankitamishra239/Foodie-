@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ComplaintActivity">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10sp"
+               android:textSize="25sp"
+               android:textColor="#ff0000"
+               android:text="Welcome! Here you can write the complaint if any information in this application is not correct."/>
+           <TextView
+               android:id="@+id/textview4.1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Name"
+               android:padding="10sp"
+               android:textColor="#000000"
+               android:textSize="40sp"/>
+           <EditText
+               android:id="@+id/name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_margin="10dp"
+               android:hint="Enter You Name"
+               android:importantForAutofill="no"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:inputType="textPersonName"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/textview4.2"
+               android:text="Complaint:-"
+               android:textColor="#000000"
+               android:textSize="40sp"
+               android:padding="10sp"/>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Write Your Complaint here."
+               android:background="@drawable/background">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/complaint"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:lines="4"
+                   android:overScrollMode="always"
+                   android:scrollbarStyle="insideInset"
+                   android:inputType="textMultiLine"
+                   android:gravity="top"
+                   android:scrollHorizontally="false"
+                   android:scrollbars="vertical"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+           <Button
+               android:id="@+id/sumbit"
+               android:layout_width="120sp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="30sp"
+               android:layout_gravity="center"
+               android:backgroundTint="#FBAEC2"
+               android:text="Submit" />
+
+
+       </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>

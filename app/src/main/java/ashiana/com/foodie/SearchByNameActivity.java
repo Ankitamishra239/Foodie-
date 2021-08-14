@@ -28,11 +28,11 @@ import java.util.List;
 
 public class SearchByNameActivity extends AppCompatActivity {
 
-   List<Name_Model> name_modelList;
+   List<Name_Model> list;
    private RecyclerView recyclerView;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("foodie-6daf0-default-rtdb");
+    DatabaseReference myRef = database.getReference();
 
 
     @Override
@@ -53,17 +53,20 @@ public class SearchByNameActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(layoutManager);
 
-        name_modelList = new ArrayList<>();
+        list = new ArrayList<>();
 
-        final Name_Adapter adapter = new Name_Adapter(name_modelList);
+        final Name_Adapter adapter = new Name_Adapter(list);
         recyclerView.setAdapter(adapter);
 
         myRef.child("Food_Details").child("Item_Names").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.i("ok","Data is coming");
                 for(DataSnapshot dataSnapshot : snapshot.getChildren())
                 {
-                    name_modelList.add(dataSnapshot.getValue(Name_Model.class));
+                    Log.i("ok 1","Data is coming here");
+                    list.add(dataSnapshot.getValue(Name_Model.class));
+                    Log.i("ok 2","name_modelList");
                 }
                 adapter.notifyDataSetChanged();
             }

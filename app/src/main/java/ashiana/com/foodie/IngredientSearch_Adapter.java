@@ -1,7 +1,6 @@
 package ashiana.com.foodie;
 
 import android.content.Intent;
-import android.icu.text.Transliterator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,30 +15,30 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Name_Adapter extends RecyclerView.Adapter<Name_Adapter.Viewholder> {
+public class IngredientSearch_Adapter extends RecyclerView.Adapter<IngredientSearch_Adapter.Viewholder>{
 
-    List<Name_Model> name_modelList;
+    List<Details_Model> list;
 
-    public Name_Adapter(List<Name_Model> name_modelList) {
-        this.name_modelList = name_modelList;
+    public IngredientSearch_Adapter(List<Details_Model> list) {
+        this.list = list;
     }
 
     @NonNull
     @Override
-    public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public IngredientSearch_Adapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_listlayout,parent,false);
-        return new Viewholder(view);
+        return new IngredientSearch_Adapter.Viewholder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Viewholder holder, int position) {
+    public void onBindViewHolder(@NonNull IngredientSearch_Adapter.Viewholder holder, int position) {
 
-        holder.setData(name_modelList.get(position).getUrl(),name_modelList.get(position).getName());
+        holder.setData(list.get(position).getFood_Image(),list.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return name_modelList.size();
+        return list.size();
     }
 
     class Viewholder extends RecyclerView.ViewHolder{
@@ -68,6 +67,5 @@ public class Name_Adapter extends RecyclerView.Adapter<Name_Adapter.Viewholder> 
             });
         }
     }
-
 
 }

@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Details">
+    tools:context=".Details"
+    android:orientation="vertical">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/toolbar" />
+    <include layout="@layout/toolbar" />
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="601dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        app:layout_constraintVertical_bias="1.0">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="20sp">
+            android:padding="10sp">
 
 
             <TextView
@@ -40,18 +37,18 @@
                 android:layout_height="50sp"
                 android:background="#FBAEC2"
                 android:gravity="center"
-                android:text="Dhokla"
+
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
             <ImageView
-                android:layout_width="360sp"
                 android:id="@+id/foodimage"
-                android:layout_height="270sp"
+                android:layout_width="350sp"
+                android:layout_height="350sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30sp"
-                android:src="@drawable/dhokla" />
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,15 +60,49 @@
 
             <RelativeLayout
                 android:layout_width="360sp"
-                android:layout_height="410sp"
+                android:layout_height="550sp"
                 android:layout_gravity="center"
                 android:background="@color/colorPrimary"
-                android:padding="10sp">
+                android:padding="5sp">
+
+                <LinearLayout
+                    android:id="@+id/layout0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="20sp"
+                    android:background="@color/colorPrimaryDark">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Serving Size -"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/serving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_toRightOf="@+id/textView"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/layout1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_above="@+id/layout2"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="20sp">
@@ -91,7 +122,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20sp"
                         android:layout_toRightOf="@+id/textView5"
-                        android:text="3.6"
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -112,7 +142,7 @@
                     android:id="@+id/layout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/layout1"
+                    android:layout_above="@+id/lo3"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="20sp">
@@ -132,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
                         android:layout_toRightOf="@+id/textView5"
-                        android:text="2"
+
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -153,7 +183,7 @@
                     android:id="@+id/lo3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/layout2"
+                    android:layout_above="@+id/layout3"
                     android:orientation="horizontal"
                     android:padding="20sp">
 
@@ -172,7 +202,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10sp"
                         android:layout_toRightOf="@+id/calo"
-                        android:text="2.6"
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -194,7 +223,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/layout4"
-                    android:layout_marginTop="30sp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="20sp">
@@ -214,7 +242,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10sp"
                         android:layout_toRightOf="@+id/textView5"
-                        android:text="2.6"
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -247,7 +274,7 @@
                         android:layout_height="wrap_content"
                         android:text="Carbohydrate -"
                         android:textColor="#FFFFFF"
-                        android:textSize="30sp"
+                        android:textSize="28sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -256,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
                         android:layout_toRightOf="@+id/textView5"
-                        android:text="3.6"
+
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -274,6 +301,7 @@
                 </LinearLayout>
             </RelativeLayout>
 
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -287,13 +315,209 @@
                 android:textSize="40sp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycleView"
+                android:id="@+id/linkrv"
                 android:layout_width="match_parent"
-                android:layout_height="300sp"
+                android:layout_height="0dp"
                 android:layout_weight="1" />
+            <LinearLayout
+                android:layout_width="360sp"
+                android:layout_height="250sp"
+                android:layout_marginTop="20sp"
+                android:orientation="vertical">
+                <TextView
+
+                    android:id= "@+id/textClass"
+                    android:layout_width="360sp"
+                    android:layout_height="50sp"
+                    android:background="#FBAEC2"
+                    android:gravity="center"
+                    android:text="Classification"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/classi"
+                    android:layout_width="match_parent"
+                    android:layout_height="70sp"
+                    android:padding="10sp"
+                    android:text="Normal Fat"
+                    android:layout_marginLeft="20sp"
+                    android:textColor="#006400"
+                    android:textSize="30sp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="360sp"
+                android:layout_height="600sp"
+                android:layout_gravity="center"
+                android:background="#FBAEC2"
+                android:padding="5sp"
+                android:id="@+id/exerciseLayout">
+
+                <LinearLayout
+                    android:id="@+id/layout3.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginTop="20sp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView3.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exercises to burn calories -"
+                        android:textColor="#ff0000"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout3.1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20sp">
+
+                    <TextView
+                        android:id="@+id/textView3.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cycling -"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cycl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_toRightOf="@+id/textView5"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3.3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout3.2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20sp">
+
+                    <TextView
+                        android:id="@+id/textView3.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Walking -"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/walk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_toRightOf="@+id/textView5"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout3.3"
+                    android:orientation="horizontal"
+                    android:padding="20sp">
+
+                    <TextView
+                        android:id="@+id/textview3.4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swimming -"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/swim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout3.4"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20sp">
+
+                    <TextView
+                        android:id="@+id/textview3.5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Running -"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/run"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_toRightOf="@+id/textView5"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+

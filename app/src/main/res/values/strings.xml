@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Foodie!</string>
-<string name="Bharatz"><a href="https://www.youtube.com/watch?v=tlDhbsO-kGc">Bharatz Kitchen</a></string>
-    <string-array name="foodItem">
-        <item>Dhokla</item>
-        <item>Dhokla</item>
-        <item>Dhokla</item>
-        <item>Dhokla</item>
-        <item>Dhokla</item>
-    </string-array>
+    <string name="Bharatz"><a href="https://www.youtube.com/watch?v=tlDhbsO-kGc">Bharatz Kitchen</a></string>
+    <string name="ingd1">Ingredient 1</string>
+    <string name="ingd2">Ingredient 2</string>
+    <string name="ingd3">Ingredient 3</string>
+    <string name="ingdr1">Ingredient 1 :</string>
+    <string name="ingdr2">Ingredient 2 :</string>
+    <string name="ingdr3">Ingredient 3 :</string>
+    <string name="takepicture">Take Picture</string>
 </resources>
